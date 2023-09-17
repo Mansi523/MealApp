@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Link rel="stylesheet" href="./style/favourite.css">
+    </Link>
+    <script src="https://kit.fontawesome.com/776f38ba77.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
+                    <span>Pour Tous</span>
+                </div>
+            </div>
+
+
+            <div class="nav-right">
+
+                <div class="nav-input-container">
+                    <input id="InputValue" type="text" placeholder="Search for your meal">
+                    <button onclick="handleScearch()"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAADc3NzNzc3m5ub39/f6+vqMjIyvr6/T09Ozs7NnZ2eRkZHl5eWsrKzq6uphYWGHh4c/Pz/w8PAgICA0NDSjo6MVFRXJyclqampbW1s8PDwmJiZ3d3dVVVW3t7dKSkoPDw99fX3BwcEtLS2ZmZmXl5ccVvkXAAAEj0lEQVR4nO2ciXaiQBBF0xjADUVU3KPEJP//idMmnCQzIdhAd1U18+4X9D08oRbk4QEAAAAAAAAAAAAAAAAAAAAAAAAAAABgTJKH3EdwTKCKRcJ9CKcESjPZch/DIe+GSh3H3AdxRmmoWTxyn8UNX4Z9Det3Q6XWQ+7z2Odvw1tY59xHsswPQx3WAfehrFJhqFQ261EZUGmodBnQm7D+YqhJexLW3w37EtY6Q6VWPSgD6g01e9/DetdQlwF+h9XAUKlN7HGDZWTodVhNDXWDNYu4D9sKc0ONl2FtZOhlGdDQ8HZn5T5yQxobKt/C2sbQr7C2M1Tq4E1Y2xpqYj8arA6GnkwDOhl60WB1NFTyw9rdUHrNasNQdljtGOoGS+wGy5ahEhtWi4ZKvQwFhtWqociwWjbUpMI2WPYNlToOJU0DXBgqUetWR4aC1q3ODMWsWx0aKhnrVreGEsLq2vA2DeC9s7o3VMxhJTFknQYQGeoGi6tmJTO81awsYSU0VDxzVlpDfWclDyu1IX2DRW+oiKcBLIZKvdCNrpgMlSrioOeGiurOymlI824Ar6EiWLcuF6enFa8jQc0ahck1j58KNke6dwPm23GcHlguKenoKkpG19dTeihoHekbrGg5H+TxKaNzzLimAWFwzp8vBYkk6zQgDK6z533m+lfK/yLLMhmdp6f9iztHIevWcPmonzDp0YnjRtBSQF/TwTmfrDe2JeWtW+eja37aZxZND8Mlt1QV+lc6i0+XwoqjwHXrJ9HtCbO4dJeUF9Z/SbbDxb5THXiU+G7AD0JdB76d9uuWkv68z6qfMNs83rUQ5S8DGhKO8qeGjiuiqU5XPqr55ldxNRWwaq0nevzoyJqqvXMZi77ZJO9ddYfqbjLiVqjG0hOxmMorbJaPwXhqqaq5jCW9evSwHG3z5/Rir3/ciYmn7i5edwfb3YWAeEbLxFmHmPF+iCRMAl2DpW1rsPvwxTMKtuNFmrnp6z9543i4hyOqaduaOJ66xppRTkwJH+7z9zu/zZnEfYo3kvHTfHB+m7j+pVWxdvxw594+pQ7jGQXnKfMG8ei2NWLfAWeuWyNmQ4K7J6fhiuSPfXyGVJ07lyFd7cliSNq5MxhmtJ07uSF5a0RsyDD3pDQ8sHTudIY7pt0DlSHfWJ7EkLpzpzZknnu6NtxMuV8ccWv4cuYfy7s0lLE1cma4irnjWeLI0Hnnbo4TQ5eDpcbYN1zF/Fuj79g2lLdzt2soZ6n5hU1DYfEssWZI3LmbY8mQqzUywIqh6DeWuhvydO7mdDWU/2HBboai41nSwdD1UtMSrQ3lx7OknWEhpTUyoI3hWlztWUdzQ2/iWdLQUEznbk4jQ0GduzkNDEV17uaYGm58eLhXYmZ48eKvOdWYGMqYe7blvqH0bz3f445hJuPbh12oNRTcuZtTY+h7PEt+MxTyaU4LVBv6VnvWUWXoz382TfhheOxNPEv+MfS09qzju+GqX/Es+TJce1x71hH0N54lQX/jWRIwfh2WhuCpRw93AAAAAAAAAAAAAAAAAAAAAAAAAAAA/nf+AKHCTVKRBPClAAAAAElFTkSuQmCC"
+                            height="30" width="30" /></button>
+                </div>
+
+                <div class="nav-meal">
+                    <a href="./meal.html">Meal</a>
+                </div>
+
+                <div class="like-button">
+                    <a href="./favourite.html"> <i class="fa-sharp fa-solid fa-heart"></i>
+                        <span id="like-conunt">0</span></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        <!-- for showing common data to Deliver Restaurants in India-->
+        <div class="container-fluid py-1" style="background-color:black;">
+            <h3 class="py-1" style="color:orange; font-size:2rem;font-weight:300;padding:50px;">Your Favourite Food Section
+            </h3>
+            <div id="display_common_food">
+                <!-- data is fetched from index.js -->
+                <div class="items my-3 mx-1">
+                    <div class="container-main-meals my-4 ">
+                        <i class="fa-solid fa-trash"></i>
+                        <img
+                            src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" />
+                          
+                            
+                        <div class="container-main-meals-all">
+
+                            <div class="container-meals-left">
+                                <span>Food Items for You</span>
+                            </div>
+
+                            <div class="container-meals-right py-3">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>₹1000</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <fotter>
+
+        <div class="fotter-div">
+            
+            <div class="soical-icons-div">
+
+                <div class="soical-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <div class="soical-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="soical-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <div class="soical-icons">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+            </div>
+
+            <div class="fotter-options">
+                <span>PRIVACY</span>
+                <span>T&C</span>
+                <span>DISCLAIMER</span>
+                <span>FEEDBACK</span>
+                <span>COVID-19 PRECAUTION</span>
+                <span>CONTACT LESS DELIVERY</span>
+            </div>
+            <div class="fotter-copyrighgt">
+                <div class="fotter-copyrighgt-span">
+                    <span>______________________________________________________________________________________________________________________________________________</span>
+                </div>
+                <br>
+                <div class="fotter-copyrighgt-span">
+                    <span>@2020 Copyright.All Rights Are Reserved @Pour Tous Food Works Pvt.Ltd.. </span>
+
+                </div>
+
+
+            </div>
+    </fotter>
+
+
+</body>
+
+</html>

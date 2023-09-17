@@ -1,0 +1,281 @@
+*{
+   margin:0;
+   padding:0;   
+}
+body{
+    height:100vh;
+}
+nav{
+ 
+    display:flex;
+    flex-direction:row;  
+    width:100%;  
+    height:12vh;
+    /* margin-top:-8px; */
+    background-color:black;
+   
+}
+
+.nav-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+    /* position:fixed; */
+}
+.nav-logo i{
+   margin:6px;
+    color:orange;
+    font-size:40px;
+    padding:10px;
+}
+.nav-logo span{
+    font-size:2rem;
+    color:orange;
+}
+
+.nav-right{
+    width:70%;
+    display:flex;
+    justify-content:space-around;
+}
+.nav-input-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:orange;
+}
+
+.nav-input-container input{
+    padding:7px;
+    width:360px;
+    border:none;
+    border-radius:20px 0px 0px 20px;
+    align-items: center;
+    font-size:1.3rem;
+    color:orange;
+}
+
+.nav-input-container input:hover{
+    box-shadow: 0 0 10px inset orange;
+}
+ 
+.nav-input-container input:focus{
+    outline:none;
+}
+.nav-input-container button{
+    background-color:white;
+     height:46px;
+     width:60px;
+     padding:8px;
+     color:orange;
+     margin-right:10px;
+     border:none;
+     outline:none;
+     border-radius:0px 20px 20px 0px;
+}
+
+.nav-meal{
+    position: relative;
+}
+.nav-meal a{
+    color:orange;
+   font-size:2.5rem;
+   text-decoration:none;
+   padding:8px;
+   position: absolute;
+   top:5px;
+  
+}
+
+
+.like-button i{
+    color:orangered;
+    font-size:50px;
+    padding:5px;
+    margin-top:10px;
+    position:relative;
+}
+
+.like-button span{
+   position:absolute;
+   color:orange;
+   font-size:1.6rem;
+   top:1px;
+   right:95px;
+   z-index:1;
+   font-weight:700;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.prev-button,
+.next-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-button {
+    position: absolute;
+    left: 10px;
+}
+
+.next-button {
+    position: absolute;
+    right: 10px;
+}
+
+.main-div{
+    width:100%;
+    /* height:600px; */
+    margin-top:-5px;
+}
+
+.fotter-div{
+    /* background-image:url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fcartoon-black-food-poster-background--712131759821730202%2F&psig=AOvVaw39cHAFquLs-Hmtd_kjeXSC&ust=1694613718606000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMixk-_FpoEDFQAAAAAdAAAAABAZ"); */
+    height:500px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+}
+.soical-icons-div{
+ display:flex;
+ flex-direction:row; 
+ justify-content:space-around;
+ /* border:1px solid red; */
+ width:60%;
+ margin-top:50px;
+ margin-bottom:70px;
+ cursor:pointer;
+}
+.soical-icons{
+    border:1px solid grey;
+    height:60px;
+    width:60px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%; 
+}
+.soical-icons:hover{
+    box-shadow: 5px 5px 10px orange;
+}
+.soical-icons i{
+    color:orange;
+    margin:auto;
+}
+.fotter-options{
+    color:orange;
+    display:flex;
+    justify-content:space-around;
+    width:90%;
+    font-size:1.3rem;
+    margin-bottom:90px;
+}
+
+.fotter-copyrighgt-span{
+    margin-bottom:40px;
+    color:orange;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+#category{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.item{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+
+}
+.item img{
+    height:100%;
+    width:100%;
+}
+
+
+#display_common_food{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.container-main-meals{
+    height:400px;
+    width:350px;
+    /* border:2px solid white;*/
+    margin:20px;
+    border-radius:30px;
+    background-color:orange;
+    position:relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for smooth effect */
+    cursor: pointer;
+}
+.container-main-meals:hover{
+    transform: scale(0.9); /* Zoom out to 90% of the original size */
+  box-shadow: 0 0 20px black;
+}
+.container-main-meals img{
+    height:300px;
+    width:355px;
+    padding:20px;
+    border-radius:10%;
+    transition: all 0.5s ease;
+    
+}
+.container-main-meals-all{
+    height:80px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+}
+.container-meals-left{
+    width:80%;
+    margin-left:40px;
+    color:white;
+    font-size:1rem;
+    font-weight:500;
+}
+
+.container-meals-right{
+    width:50%;
+    margin-left:150px;
+    /* margin-top:20px; */
+    display:flex;
+    flex-direction:column;
+    margin-top:-20px;
+    color:white;
+    font-weight:5rem;
+}
+.container-meals-right i{
+    font-size:40px;
+    color:orangered;
+}
+.container-meals-right span{
+    font-size:1.3rem;
+    color:white;
+}
