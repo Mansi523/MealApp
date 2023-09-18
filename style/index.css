@@ -52,8 +52,10 @@ nav{
     border:none;
     border-radius:20px 0px 0px 20px;
     align-items: center;
-    font-size:1.3rem;
+    font-size:1.2rem;
     color:orange;
+    border:2px solid black;
+    border-right:none;
 }
 
 .nav-input-container input:hover{
@@ -64,6 +66,7 @@ nav{
     outline:none;
 }
 .nav-input-container button{
+   
     background-color:white;
      height:46px;
      width:60px;
@@ -73,8 +76,27 @@ nav{
      border:none;
      outline:none;
      border-radius:0px 20px 20px 0px;
+     border:2px solid black;
 }
+.parent-div-input{
+    position: relative;
+}
+#suggestion{
+  background-color:white;
+   z-index:99;
+   padding:10px;
+}
+#suggestion ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+#suggestion ul li{
 
+}
+#suggestion ul li span{
+    margin:0 5px 0 5px;
+}
 .nav-meal{
     position: relative;
 }

@@ -1,13 +1,15 @@
 
 const category = document.getElementById("category");
 const mainFoodSection = document.getElementById("display_common_food");
+let count = document.getElementById("like-conunt");
+
 let categoryList=[];
 let categoryname = {};
 let MainFoodList =[];
 let dummy = "";
 let favouriteItemList = JSON.parse(window.localStorage.getItem("favourite")) || [];
 
-
+count.innerHTML=favouriteItemList.length;
 
 //for handling the section in the categories.
   const handleCategoryList =(e)=>{
@@ -102,13 +104,13 @@ function MainDisplay(){
              
                   <div class="items my-3 mx-1" >
                    <div class="container-main-meals my-4 ">
-                   <img src="${meals.strMealThumb
+                   <img onclick="addMeal(${meals.idMeal })" src="${meals.strMealThumb
                    }"/>
 
                    <div class="container-main-meals-all">
 
                    <div class="container-meals-left">
-                   <span>${meals.strMeal
+                   <span onclick="addMeal(${meals.idMeal })">${meals.strMeal
                    }</span>
                    </div>
            
@@ -153,15 +155,27 @@ function MainDisplay(){
           item.idMeal == fav.idMeal 
 
         ));
+        console.log(favouriteItemList);
+         
         console.log("favvalue",fav1);
         if(fav1 === undefined){
           alert("item is added!!");
         favouriteItemList.push(fav);
         // console.log(favouriteItemList);
         window.localStorage.setItem("favourite",JSON.stringify(favouriteItemList));
+       count.innerHTML=favouriteItemList.length;
+
         }else{
           alert("Item already exist");
         }
         }
 
+       //add meal page
 
+      const addMeal=(id)=>{
+        const addmealfav = MainFoodList.find((item)=>(
+          item.idMeal == id 
+        ));
+        window.localStorage.setItem("detailMeal",JSON.stringify(addmealfav));
+        window.location.href = "http://127.0.0.1:5500/meal.html";
+      }
