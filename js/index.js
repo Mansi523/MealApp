@@ -5,6 +5,10 @@ let categoryList=[];
 let categoryname = {};
 let MainFoodList =[];
 let dummy = "";
+let favouriteItemList = JSON.parse(window.localStorage.getItem("favourite")) || [];
+
+
+
 //for handling the section in the categories.
   const handleCategoryList =(e)=>{
     categoryname = categoryList.find((item,index)=>(index === e));
@@ -13,6 +17,8 @@ let dummy = "";
     dummy="";
     MainDisplay();
 }
+
+
 
 // Category section using IIFE.
 
@@ -48,6 +54,9 @@ let dummy = "";
 
   
 // display food section.
+
+
+
 
 function MainDisplay(){
     // fetched data from api in the category section.
@@ -104,8 +113,10 @@ function MainDisplay(){
                    </div>
            
                    <div class="container-meals-right py-3">
-                   <i class="fa-solid fa-heart"></i>
-                  <span>₹${Math.floor(Math.random()*1000)}</span>
+                
+                   <i onclick="handlefavourite(${meals.idMeal })" class="fa-solid fa-heart"></i>
+                  
+                   <span>₹${Math.floor(Math.random()*1000)}</span>
                    </div>
 
                    </div>
@@ -125,3 +136,32 @@ function MainDisplay(){
    
     MainDisplay();
    }
+
+
+      //handlefavourite food function
+
+      const handlefavourite=(id)=>{
+        const fav = MainFoodList.find((item)=>(
+         
+          item.idMeal == id 
+
+        ));
+        console.log("uhu",fav);
+        console.log(favouriteItemList);
+        const fav1 = favouriteItemList.find((item)=>(
+            
+          item.idMeal == fav.idMeal 
+
+        ));
+        console.log("favvalue",fav1);
+        if(fav1 === undefined){
+          alert("item is added!!");
+        favouriteItemList.push(fav);
+        // console.log(favouriteItemList);
+        window.localStorage.setItem("favourite",JSON.stringify(favouriteItemList));
+        }else{
+          alert("Item already exist");
+        }
+        }
+
+
