@@ -2,14 +2,137 @@
 const category = document.getElementById("category");
 const mainFoodSection = document.getElementById("display_common_food");
 let count = document.getElementById("like-conunt");
+const InputValue = document.getElementById("InputValue");
+const suggestion = document.getElementById("suggestion");
+const btnsearch  = document.getElementById("btnsearch");
+const displaysuggestion = document.getElementById("display_suggestion");
 
 let categoryList=[];
 let categoryname = {};
 let MainFoodList =[];
+let suggestedFoodList=[];
+let suggestdata ="";
 let dummy = "";
 let favouriteItemList = JSON.parse(window.localStorage.getItem("favourite")) || [];
 
 count.innerHTML=favouriteItemList.length;
+
+// eventlistner for making the display none when clicking outside the input section.
+
+document.addEventListener("click",(event)=>{
+  if(event.target !== suggestion && event.target !== InputValue ){
+         suggestion.style.display = "none";
+         
+         InputValue.style.borderRadius = "20px 0 0  20px";
+        //  suggestion.style.display = "block";
+         InputValue.style.borderBottom = "2px solid black";
+         btnsearch.style.borderBottom = "2px solid black";
+         btnsearch.style.borderRadius = " 0 20px 20px 0 ";
+         btnsearch.style.height="46px";
+  }
+})
+
+
+
+
+// function for handling show suggestion.
+function showSuggestion(){
+  mainFoodSection.innerHTML="";
+  console.log("mainFoodSection",MainFoodList)
+mainFoodSection.innerHTML += MainFoodList.map((meals,index)=>(
+          `
+     
+          <div class="items my-3 mx-1" >
+           <div class="container-main-meals my-4 ">
+           <img onclick="addMeal(${meals.idMeal })" src="${meals.strMealThumb
+           }"/>
+
+           <div class="container-main-meals-all">
+
+           <div class="container-meals-left">
+           <span onclick="addMeal(${meals.idMeal })">${meals.strMeal
+           }</span>
+           </div>
+   
+           <div class="container-meals-right py-3">
+        
+           <i onclick="handlefavourite(${meals.idMeal })" class="fa-solid fa-heart"></i>
+          
+           <span>₹${Math.floor(Math.random()*1000)}</span>
+           </div>
+
+           </div>
+
+            </div>
+           </div>
+
+          `         
+))
+
+}
+
+
+
+
+// function for handling suggestion.
+const handlesuggestion =async(id)=>{
+  
+const suggestiondisplay = suggestedFoodList.find((item)=>(
+  item.idMeal == id
+))
+console.log(suggestiondisplay);
+try{
+  const categoryapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${suggestiondisplay.strMeal}`);
+  const categorydata = await categoryapi.json();
+  // suggestdata ="";
+  MainFoodList=categorydata.meals;
+  console.log("MainFoodList",MainFoodList);
+  // InputValue.value="";
+
+  showSuggestion()
+}catch(err){
+      console.log(err);
+}
+  
+}
+
+// for handling scearch bar suggestion.
+
+InputValue.addEventListener("input",async()=>{
+   
+    const inputdata = InputValue.value;
+    console.log(inputdata);
+    InputValue.style.borderRadius = "20px 0 0  0";
+    suggestion.style.display = "block";
+    InputValue.style.borderBottom = "none";
+    btnsearch.style.borderBottom = "none";
+    btnsearch.style.borderRadius = " 0 20px 0 0 ";
+    suggestion.style.border = "2px solid black";
+    suggestion.style.borderTop = "none";
+    btnsearch.style.borderLeft = "none";
+    btnsearch.style.height = "45px";
+    
+    try{
+      const suggestionapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputdata}`);
+      const suggestiondata = await suggestionapi.json();
+     
+      suggestedFoodList=suggestiondata.meals;
+      console.log("suggestedFoodList",suggestedFoodList);
+     
+    }catch(err){
+          // alert("Sorry,this item is not available right now!!")
+    }
+    // suggestedFoodList = [1,2,3,4,5,6];
+    displaysuggestion.innerHTML= "";
+    displaysuggestion.innerHTML+=suggestedFoodList?.map((item,index)=>(
+      `
+      <li onclick="handlesuggestion(${item.idMeal})"><i class="fa-regular fa-clock"></i><span>${item.strMeal}</span></li>
+      
+      `
+    )).join("")
+})
+
+
 
 //for handling the section in the categories.
   const handleCategoryList =(e)=>{
@@ -78,18 +201,25 @@ function MainDisplay(){
         } catch (error) {
           console.error("Error parsing JSON:", error);
         }
-      
+        const defaultdummy = "p";
         console.log(dummy);
         console.log(categoryname,localcategory);
+        // suggestdata = JSON.parse(window.localStorage.getItem("suggestion"));
+        // console.log("suggestdata",suggestdata.strMeal);
+        // InputValue.value = suggestdata.strMeal;
+        console.log(dummy,categoryname,defaultdummy);
         try{
-          const categoryapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ dummy===""?categoryname:dummy }`);
+          const categoryapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dummy==="" ? categoryname : dummy}`);
           const categorydata = await categoryapi.json();
-         
+          // suggestdata ="";
           MainFoodList=categorydata.meals;
           console.log("MainFoodList",MainFoodList);
+          // InputValue.value="";
+
           showInMain();
         }catch(err){
-              alert("Sorry,this item is not available right now!!")
+              // alert("Sorry,this item is not available right now!!")
+              console.log("err",err);
         }
      
       }
@@ -99,7 +229,7 @@ function MainDisplay(){
       function showInMain(){
           mainFoodSection.innerHTML="";
           console.log("mainFoodSection",MainFoodList)
-        mainFoodSection.innerHTML += MainFoodList.map((meals,index)=>(
+        mainFoodSection.innerHTML += MainFoodList?.map((meals,index)=>(
                   `
              
                   <div class="items my-3 mx-1" >
@@ -128,7 +258,8 @@ function MainDisplay(){
 
                   `         
         ))
-     }
+     
+      }
 
     }
 
