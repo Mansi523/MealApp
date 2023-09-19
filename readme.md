@@ -56,3 +56,19 @@ Before you start, make sure you have the following:
 
    ```bash
    git clone https://github.com/Mansi523/MealApp.git
+
+### AUTHOR
+ # MANSI KUMARI
+
+### LAND PAGE
+<a href="mansi523.github.io/MealApp/"><img src="" alt="LAND PAGE" /></a>
+
+### FAVOURITE PAGE
+<a href="mansi523.github.io/MealApp/"><img src="" alt="FAVOURITE PAGE" /></a>
+
+### DETAILS PAGE
+<a href="mansi523.github.io/MealApp/"><img src="" alt="DETAILS PAGE" /></a>
+
+### DEMO
+
+- mansi523.github.io/MealApp/
