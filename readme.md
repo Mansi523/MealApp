@@ -71,4 +71,4 @@ Before you start, make sure you have the following:
 
 ### DEMO
 
-- mansi523.github.io/MealApp/
+- https://mansi523.github.io/MealApp/
