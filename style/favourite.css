@@ -12,7 +12,7 @@
      width:100%;  
      height:12vh;
      /* margin-top:-8px; */
-     background-color:black;
+     background-color:#FEDE00;
  }
  
  .nav-container{
@@ -24,13 +24,13 @@
  }
  .nav-logo i{
     margin:6px;
-     color:orange;
+     color:black;
      font-size:40px;
      padding:10px;
  }
  .nav-logo span{
      font-size:2rem;
-     color:orange;
+     color:black;
  }
  
  .nav-right{
@@ -42,7 +42,7 @@
      display:flex;
      justify-content:center;
      align-items:center;
-     color:orange;
+     color:black;
  }
  
  .nav-input-container input{
@@ -52,11 +52,11 @@
      border-radius:20px 0px 0px 20px;
      align-items: center;
      font-size:1.4rem;
-     color:orange;
+     color:black;
  }
  
  .nav-input-container input:hover{
-     box-shadow: 0 0 10px inset orange;
+     box-shadow: 0 0 10px inset black;
  }
   
  .nav-input-container input:focus{
@@ -67,7 +67,7 @@
       height:46px;
       width:60px;
       padding:8px;
-      color:orange;
+      color:black;
       margin-right:10px;
       border:none;
       outline:none;
@@ -78,7 +78,7 @@
      position: relative;
  }
  .nav-meal a{
-     color:orange;
+     color:black;
     font-size:2.5rem;
     text-decoration:none;
     padding:8px;
@@ -98,7 +98,7 @@
  
  .like-button span{
     position:absolute;
-    color:orange;
+    color:black;
     font-size:1.6rem;
     top:1px;
     right:95px;
@@ -120,7 +120,7 @@
     /* border:2px solid white;*/
     margin:20px;
     border-radius:30px;
-    background-color:orange;
+    background-color:#FEDE00;
     position:relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for smooth effect */
     cursor: pointer;
@@ -157,16 +157,16 @@
 .container-meals-left{
     width:80%;
     margin-left:40px;
-    color:white;
+    color:black;
     font-size:1rem;
-    font-weight:500;
+    font-weight:600;
 }
 .container-meals-right{
     width:50%;
     margin-left:110px;
     display:flex;
     flex-direction:column;
-    color:white;
+    color:black;
     font-weight:5rem;
     position:relative;
     
@@ -180,7 +180,7 @@
 }
 .container-meals-right span{
     font-size:1.3rem;
-    color:white;
+    color:black;
     position:absolute;
     top:40%;
 }
@@ -189,27 +189,38 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    height:400px;
 }
-.text{
-    color:orange;
+.text-a{
+    margin-top:50px;
+    margin-bottom:50px;
+    color:white;
+    font-size:2rem;
+}
+.text-b{
+    margin-top:50px;
+    color:white;
     font-size:2rem;
 }
 #btn{
  margin:10px;
  padding:10px; 
  width:150px;
- background-color:orangered;
+ background-color:white;
  border-radius:5px;
 }
 #btn a{
     text-decoration:none;
-    color:white;
+    color:black;
     font-weight:500;
     font-size:1rem;
 }
-
+#btn:hover{
+    background-color:#FEDE00;
+}
 #btn a:hover{
- color:blue;
+ color:white;
+
 }
 
 
@@ -219,7 +230,7 @@
 .fotter-div{
     height:500px;
     width:100%;
-    background-color:black;
+    background-color:#FEDE00;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -236,7 +247,7 @@
  cursor:pointer;
 }
 .soical-icons{
-    border:1px solid grey;
+    border:1px solid black;
     height:60px;
     width:60px;
     display:flex;
@@ -244,14 +255,14 @@
     border-radius:50%; 
 }
 .soical-icons:hover{
-    box-shadow: 5px 5px 10px orange;
+    box-shadow: 5px 5px 10px black;
 }
 .soical-icons i{
-    color:orange;
+    color:black;
     margin:auto;
 }
 .fotter-options{
-    color:orange;
+    color:black;
     display:flex;
     justify-content:space-around;
     width:90%;
@@ -261,7 +272,7 @@
 
 .fotter-copyrighgt-span{
     margin-bottom:40px;
-    color:orange;
+    color:black;
     display:flex;
     flex-direction:column;
     justify-content:center;

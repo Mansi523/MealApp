@@ -111,7 +111,7 @@ InputValue.addEventListener("input",async()=>{
     suggestion.style.borderTop = "none";
     btnsearch.style.borderLeft = "none";
     btnsearch.style.height = "45px";
-    
+
     try{
       const suggestionapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputdata}`);
       const suggestiondata = await suggestionapi.json();
@@ -165,10 +165,11 @@ InputValue.addEventListener("input",async()=>{
         category.innerHTML += categoryList.map((categories,index)=>(
     
                   `
-                  <div class="item" onclick="handleCategoryList(${index})">
+                  <div style="text-align:center;" class="item" onclick="handleCategoryList(${index})">
                    
                   <img src="${categories.strCategoryThumb
                   }"/>
+                  <span style="font-size:1.3rem;font-weight:500;">${categories.strCategory}</span>
                   </div>
 
                   `         

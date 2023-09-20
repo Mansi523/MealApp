@@ -12,8 +12,8 @@ nav{
     width:100%;  
     height:12vh;
     /* margin-top:-8px; */
-    background-color:white;
-   
+    /* background-color:rgb(14 27 77); */
+    background-color:#FEDE00;
 }
 
 .nav-container{
@@ -25,13 +25,13 @@ nav{
 }
 .nav-logo i{
    margin:6px;
-    color:orange;
+    color:black;
     font-size:40px;
     padding:10px;
 }
 .nav-logo span{
     font-size:2rem;
-    color:orange;
+    color: black;
 }
 
 .nav-right{
@@ -43,7 +43,7 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    color:orange;
+    color: black;
 }
 
 .nav-input-container input{
@@ -53,15 +53,13 @@ nav{
     border-radius:20px 0px 0px 20px;
     align-items: center;
     font-size:1.2rem;
-    color:orange;
+    color: black;
     border:2px solid black;
     border-right:none;
+   
 }
 
-/* .nav-input-container input:hover{
-    box-shadow: 0 0 10px inset orange;
-}
-  */
+
 .nav-input-container input:focus{
     outline:none;
 }
@@ -71,12 +69,13 @@ nav{
      height:46px;
      width:60px;
      padding:8px;
-     color:orange;
+     color: black;
      margin-right:10px;
      border:none;
      outline:none;
      border-radius:0px 20px 20px 0px;
      border:2px solid black;
+     border-left:none;
 }
 .parent-div-input{
     position: relative;
@@ -110,7 +109,7 @@ cursor:pointer;
     position: relative;
 }
 .nav-meal a{
-    color:orange;
+    color: black;
    font-size:2.5rem;
    text-decoration:none;
    padding:8px;
@@ -130,7 +129,7 @@ cursor:pointer;
 
 .like-button span{
    position:absolute;
-   color:orange;
+   color:black;
    font-size:1.6rem;
    top:1px;
    right:95px;
@@ -183,7 +182,7 @@ cursor:pointer;
     /* background-image:url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fcartoon-black-food-poster-background--712131759821730202%2F&psig=AOvVaw39cHAFquLs-Hmtd_kjeXSC&ust=1694613718606000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMixk-_FpoEDFQAAAAAdAAAAABAZ"); */
     height:500px;
     width:100%;
-    background-color:black;
+    background-color:#FEDE00;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -201,7 +200,7 @@ cursor:pointer;
  cursor:pointer;
 }
 .soical-icons{
-    border:1px solid grey;
+    border:1px solid black;
     height:60px;
     width:60px;
     display:flex;
@@ -209,14 +208,14 @@ cursor:pointer;
     border-radius:50%; 
 }
 .soical-icons:hover{
-    box-shadow: 5px 5px 10px orange;
+    box-shadow: 5px 5px 10px black;
 }
 .soical-icons i{
-    color:orange;
+    color:black;
     margin:auto;
 }
 .fotter-options{
-    color:orange;
+    color:black;
     display:flex;
     justify-content:space-around;
     width:90%;
@@ -226,7 +225,7 @@ cursor:pointer;
 
 .fotter-copyrighgt-span{
     margin-bottom:40px;
-    color:orange;
+    color:black;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -240,14 +239,12 @@ cursor:pointer;
 .item{
     height:200px;
     width:200px;
-    border-radius:50%;
-
 }
 .item img{
     height:100%;
     width:100%;
+    border-radius:50%;
 }
-
 
 #display_common_food{
     display:flex;
@@ -261,7 +258,7 @@ cursor:pointer;
     /* border:2px solid white;*/
     margin:20px;
     border-radius:30px;
-    background-color:orange;
+    background-color:#FEDE00;
     position:relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for smooth effect */
     cursor: pointer;
@@ -287,7 +284,7 @@ cursor:pointer;
 .container-meals-left{
     width:80%;
     margin-left:40px;
-    color:white;
+    color:black;
     font-size:1rem;
     font-weight:500;
 }
@@ -299,7 +296,7 @@ cursor:pointer;
     display:flex;
     flex-direction:column;
     margin-top:-20px;
-    color:white;
+    color:black;
     font-weight:5rem;
 }
 .container-meals-right i{
@@ -308,5 +305,172 @@ cursor:pointer;
 }
 .container-meals-right span{
     font-size:1.3rem;
-    color:white;
+    color:black;
+}
+
+/* media queries for different devices */
+
+@media screen and (max-width:2603px) {
+    .like-button span{
+       left:91%; 
+    } 
+}
+
+@media screen and (max-width:2400px) {
+
+    .like-button span{
+       left:91%;
+    } 
+
+} 
+
+@media screen and (max-width:2200px) {
+
+    .like-button span{
+       left:91.5%;
+    } 
+
+}
+
+
+@media screen and (max-width:2120px) {
+
+    .like-button span{
+       left:91.5%;
+      
+    } 
+
+}
+
+@media screen and (max-width:2030px) {
+
+ 
+    .like-button span{
+     
+       left:91.7%;
+       
+    } 
+
+}
+
+@media screen and (max-width:1800px) {
+
+    
+    .like-button span{
+       left:92%;
+    } 
+
+}
+@media screen and (max-width:1600px) {
+
+    
+    .like-button span{
+       left:92.5%;
+    } 
+
+}
+
+@media screen and (max-width:1450px) { 
+    .like-button span{
+       left:93%;
+    } 
+
+}
+
+@media screen and (max-width:1300px) {
+    .like-button span{
+       left:93.5%;
+    } 
+
+}
+
+@media screen and (max-width:1180px) {
+  
+    .nav-right{
+        width:80%;
+    }
+   
+}
+
+@media screen and (max-width:1046px) {
+    .nav-logo span{
+      font-size:1.5rem;  
+    }
+    .nav-right{
+        width:80%;
+    }
+    .nav-input-container input{
+      width:300px;  
+    } 
+}
+
+
+
+@media screen and (max-width:910px) {
+  .nav-left{
+    width:20%;
+  }
+  .nav-logo i{
+    font-size:30px;
+    padding:5px;
+    margin:2px;
+  }
+  .nav-logo span{
+    font-size:1.3rem;  
+  }
+  .nav-right{
+    width:80%;
+  }
+ 
+
+}
+
+@media screen and (max-width:900px) {
+    .nav-meal a{
+        font-size:2rem;
+        padding:5px;
+    }
+    .like-button i{
+        font-size:40px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .nav-input-container input{
+        width:250px;  
+      } 
+    .nav-meal a{
+        font-size:2rem;
+        padding:5px;
+    }
+   
+}
+
+@media screen and (max-width:739px) {
+    nav{
+        height:7vh;
+    }
+    .nav-right{
+        width:80%;
+    }
+    .nav-meal a{
+        font-size:1.5rem;
+        padding:3px;
+    }
+    .like-button i{
+        font-size:30px;
+        padding:2px;
+    }
+    .like-button span{
+       font-size:1rem; 
+    }
+  .fotter-options{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:400px) {
+   #display_common_food{
+    margin-left:10px;
+   } 
 }

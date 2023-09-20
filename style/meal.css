@@ -11,8 +11,7 @@
      flex-direction:row;  
      width:100%;  
      height:12vh;
-     /* margin-top:-8px; */
-     background-color:black;
+     background-color:#FEDE00;
     
  }
  
@@ -25,13 +24,13 @@
  }
  .nav-logo i{
     margin:6px;
-     color:orange;
+     color:black;
      font-size:40px;
      padding:10px;
  }
  .nav-logo span{
      font-size:2rem;
-     color:orange;
+     color:black;
  }
  
  .nav-right{
@@ -43,7 +42,7 @@
      display:flex;
      justify-content:center;
      align-items:center;
-     color:orange;
+     color:black;
  }
  
  .nav-input-container input{
@@ -53,12 +52,9 @@
      border-radius:20px 0px 0px 20px;
      align-items: center;
      font-size:1.4rem;
-     color:orange;
+     color:black;
  }
- 
- .nav-input-container input:hover{
-     box-shadow: 0 0 10px inset orange;
- }
+
   
  .nav-input-container input:focus{
      outline:none;
@@ -68,7 +64,7 @@
       height:46px;
       width:60px;
       padding:8px;
-      color:orange;
+      color:black;
       margin-right:10px;
       border:none;
       outline:none;
@@ -79,7 +75,7 @@
      position: relative;
  }
  .nav-meal a{
-     color:orange;
+     color:black;
     font-size:2.5rem;
     text-decoration:none;
     padding:8px;
@@ -99,10 +95,10 @@
  
  .like-button span{
     position:absolute;
-    color:orange;
+    color:black;
     font-size:1.6rem;
-    top:1px;
-    right:95px;
+    left:82.6%;
+    top:5px;
     z-index:1;
     font-weight:700;
  }
@@ -110,7 +106,7 @@
 /* main section  */
 
 .main-section{
-    background-color:grey;
+    background-color:black;
     width:100%;
     height:1000px;
     display:flex;
@@ -122,13 +118,13 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:-150px;
+    margin-top:50px;
     width:70%;
-    height:700px;
+    height:800px;
     border:2px solid black;
     border-radius:10px;
     position:relative;
-    background-color:orange;
+    background-color:#FEDE00;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for smooth effect */
     cursor: pointer;
 }
@@ -143,8 +139,8 @@ right:10px;
 font-size:40px;
 }
 .details-meal-name{
-margin-top:-150px;
-font-size:2rem;
+margin-top:-20px;
+font-size:1rem;
 
 }
 .details-category-name{
@@ -171,25 +167,9 @@ object-fit: cover;
 .watch-video a{
 font-size:1.5rem;
 text-decoration:none;
-color:white;
+color:black;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  
@@ -199,7 +179,7 @@ color:white;
 .fotter-div{
     height:500px;
     width:100%;
-    background-color:black;
+    background-color:#FEDE00;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -216,7 +196,7 @@ color:white;
  cursor:pointer;
 }
 .soical-icons{
-    border:1px solid grey;
+    border:1px solid black;
     height:60px;
     width:60px;
     display:flex;
@@ -224,14 +204,14 @@ color:white;
     border-radius:50%; 
 }
 .soical-icons:hover{
-    box-shadow: 5px 5px 10px orange;
+    box-shadow: 5px 5px 10px black;
 }
 .soical-icons i{
-    color:orange;
+    color:black;
     margin:auto;
 }
 .fotter-options{
-    color:orange;
+    color:black;
     display:flex;
     justify-content:space-around;
     width:90%;
@@ -241,7 +221,7 @@ color:white;
 
 .fotter-copyrighgt-span{
     margin-bottom:40px;
-    color:orange;
+    color:black;
     display:flex;
     flex-direction:column;
     justify-content:center;
