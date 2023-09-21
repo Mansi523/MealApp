@@ -1,36 +1,62 @@
+.img-box img{
+  max-width:100%;
 
-    body {
-      position: relative;
-      height: 100%;
-    }
+}
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
+.slider_container .container{
+ padding: 0 15px;
+ max-width: 1230px;
+ margin: 0 auto;
+}
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+.card_slider {
+  padding: 50px 0;
+ 
+}
+.text-d{
+  font-size:1.5rem;
+  font-weight:700;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  color: black;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+  color: black;
+}
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  background-color:black;
+}
+
+@media screen and (max-width:525px){
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    display: none !important;;
+  }
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+   display:none !important;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    display:none !important;
+  }
+  .slider_container{
+    padding:0 !important;
+    height:250px !important;
+    margin:0 !important;
+  }
+  .swiper-slide{
+    padding:0 !important;
+    margin:0 !important;
+  }
+  .text-d{
+    display:none !important;
+  }
+  .img-box img{
+    height:150px !important;
+    width:150px !important;
+    border-radius:50% !important;
+  }
+}

@@ -187,7 +187,7 @@ cursor:pointer;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    
+    overflow: hidden; 
 }
 .soical-icons-div{
  display:flex;
@@ -404,7 +404,18 @@ cursor:pointer;
     } 
 }
 
+@media screen and (max-width:982px){
+    .soical-icons-div{
+        width:50%;
+    }
+     .fotter-options{
+        width:70%;
+        font-size:1rem;
 
+     }
+
+}
+  
 
 @media screen and (max-width:910px) {
   .nav-left{
@@ -446,10 +457,22 @@ cursor:pointer;
    
 }
 
-@media screen and (max-width:739px) {
-    nav{
-        height:7vh;
+@media screen and (max-width:857px) {
+    .fotter-options{
+        width:60%;
+        flex-direction:column;
+        text-align:center;
     }
+    .soical-icons-div{
+        margin-top:200px;
+    }
+}
+
+
+
+
+@media screen and (max-width:739px) {
+   
     .nav-right{
         width:80%;
     }
@@ -469,8 +492,181 @@ cursor:pointer;
   }
 }
 
-@media screen and (max-width:400px) {
-   #display_common_food{
-    margin-left:10px;
+
+
+@media screen and (max-width:672px) {
+  .nav-right{
+    width:70%;
+  }
+  .nav-meal a{
+    font-size:1.2rem;
+    padding:3px;
+    margin-left: -23px;
+
+}
+.nav-input-container input{
+    font-size:1rem;
+    padding:7px;
+    width:231px;
+}
+.nav-input-container button{
+    padding:7px;
+    height:41.5px;
+}
+.like-button i{
+    font-size:25px;
+    padding:2px;
+}
+.like-button span{
+  left:95%;
+  margin-left:10px;
+}
+.nav-left{
+    width:30%;
+}
+  
+}
+
+@media screen and (max-width:641px){
+    .nav-input-container button{
+        height:41.5px !important;
+    }  
+}
+
+
+@media screen and (max-width:569px) {
+
+    .nav-input-container input{
+        font-size:1rem;
+        padding:5px;
+        width:200px;
+    }
+    .nav-input-container button{
+        padding:6px;
+        height: 37.5px;
+        width:40px;
+    }
+    .nav-input-container img{
+        height: 20px;
+        width:20px;
+    }
+    .like-button span{
+        left:93.5%;
+        margin-left:10px;
+      }
+}
+
+@media screen and (max-width:568px){
+    .nav-input-container button{
+        padding:6px !important;
+        height:37.5px !important;
+   
+    }
+    .nav-input-container img{
+        height:15px;
+        width:20px;
+    }
+}
+
+
+  
+@media screen and (max-width:583px) {
+   .soical-icons-div{
+    width:80%;
    } 
+ }
+
+ @media screen and (max-width:497px) {
+    .nav-input-container input{
+        font-size:1rem;
+        padding:5px;
+        width:170px;
+    }
+  }
+ 
+@media screen and (max-width:457px) {
+    .nav-left{
+        width:35%;
+      }
+      .nav-input-container input{
+        width:120px;
+      } 
+}
+
+ @media screen and (max-width:423px) {
+    .soical-icons-div{
+     width:80%;
+    } 
+    .container-main-meals{
+        width:320px;
+    }
+    .container-main-meals img{
+        width:320px;
+    }
+    .container-meals-left{
+        width:70%;
+        font-size:0.6rem;
+    }
+    .container-meals-right{
+        width:40%;
+    }
+    .container-meals-right i{
+        font-size:30px;
+    }
+    .container-meals-right span{
+        font-size:1rem;
+    }
+  }
+
+  @media screen and (max-width:400px){
+    #pour-tous{
+        display:none !important;
+    }
+    .nav-right{
+        width:85%;
+    }
+    .nav-left{
+        width:10%;
+    }
+    .like-button span{
+       left:90%;
+    }
+ 
+  }
+
+  @media screen and (max-width:397px){
+
+    .container-main-meals{
+        height:350px;
+        width:280px;
+    }
+
+    .container-main-meals img{
+        width:280px;
+        height:250px;
+    }
+    .container-meals-left{
+        width:60%;
+        font-size:0.5rem;
+    }
+    .container-meals-right{
+        width:60%;
+    }
+    .container-meals-right i{
+        font-size:20px;
+    }
+    .container-meals-right span{
+        font-size:0.7rem;
+    }
+  }
+
+
+  @media screen and (max-width:789px){
+    #display_common_food{
+        display:flex;
+        justify-content:center !important;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+  
 }

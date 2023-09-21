@@ -13,6 +13,7 @@ let MainFoodList =[];
 let suggestedFoodList=[];
 let suggestdata ="";
 let dummy = "";
+
 let favouriteItemList = JSON.parse(window.localStorage.getItem("favourite")) || [];
 
 count.innerHTML=favouriteItemList.length;
@@ -92,6 +93,7 @@ try{
   showSuggestion()
 }catch(err){
       console.log(err);
+      alert("Sorry,this item is not available right now!!")
 }
   
 }
@@ -115,12 +117,14 @@ InputValue.addEventListener("input",async()=>{
     try{
       const suggestionapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputdata}`);
       const suggestiondata = await suggestionapi.json();
-     
+      
       suggestedFoodList=suggestiondata.meals;
       console.log("suggestedFoodList",suggestedFoodList);
-     
+      if(suggestedFoodList==null){
+        return;
+      }
     }catch(err){
-          // alert("Sorry,this item is not available right now!!")
+        console.log(err); 
     }
     // suggestedFoodList = [1,2,3,4,5,6];
     displaysuggestion.innerHTML= "";
@@ -153,24 +157,31 @@ InputValue.addEventListener("input",async()=>{
         const categoryapi = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
         const categorydata = await categoryapi.json();
         console.log(categorydata);
-        categoryList=categorydata.categories.slice(0,5);
+        categoryList=categorydata.categories;
 
         showInCategory();
       }
       
       handleCategory();
+
+
+
         //function for showing category
       function showInCategory(){
         console.log(categoryList.categories);
         category.innerHTML += categoryList.map((categories,index)=>(
     
                   `
-                  <div style="text-align:center;" class="item" onclick="handleCategoryList(${index})">
-                   
-                  <img src="${categories.strCategoryThumb
-                  }"/>
-                  <span style="font-size:1.3rem;font-weight:500;">${categories.strCategory}</span>
+
+                  <div class="swiper-slide pb-5"
+                  onclick="handleCategoryList(${index})">
+                  <div class="img-box text-center">
+                      <img src="${categories.strCategoryThumb
+                        }" alt=""/>
+                      <span class="text-d">${categories.strCategory}</span>
                   </div>
+              </div>
+            
 
                   `         
         ))
@@ -186,7 +197,8 @@ InputValue.addEventListener("input",async()=>{
 
 function MainDisplay(){
     // fetched data from api in the category section.
-    let categoryname = "";
+let categorynamemain = "p";
+
     async function handleMainFood(){
         dummy =document.getElementById("InputValue").value;
          document.getElementById("InputValue").value="";
@@ -198,28 +210,32 @@ function MainDisplay(){
         try {
           const categoryObject = JSON.parse(localcategory);
           console.log("***", categoryObject.strCategory);
-           categoryname = categoryObject.strCategory;
+          categorynamemain  = categoryObject.strCategory;
         } catch (error) {
           console.error("Error parsing JSON:", error);
         }
         const defaultdummy = "p";
         console.log(dummy);
-        console.log(categoryname,localcategory);
+        console.log(categorynamemain ,localcategory);
         // suggestdata = JSON.parse(window.localStorage.getItem("suggestion"));
         // console.log("suggestdata",suggestdata.strMeal);
         // InputValue.value = suggestdata.strMeal;
-        console.log(dummy,categoryname,defaultdummy);
+        console.log(dummy,categorynamemain ,defaultdummy);
         try{
-          const categoryapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dummy==="" ? categoryname : dummy}`);
+          const categoryapi = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dummy==="" ? categorynamemain  : dummy}`);
           const categorydata = await categoryapi.json();
           // suggestdata ="";
+        
           MainFoodList=categorydata.meals;
           console.log("MainFoodList",MainFoodList);
           // InputValue.value="";
-
+          if(MainFoodList === null){
+            alert("Sorry,this item is not available right now!!")
+            return;
+          }
           showInMain();
         }catch(err){
-              // alert("Sorry,this item is not available right now!!")
+              alert("Sorry,this item is not available right now!!")
               console.log("err",err);
         }
      
@@ -233,7 +249,7 @@ function MainDisplay(){
         mainFoodSection.innerHTML += MainFoodList?.map((meals,index)=>(
                   `
              
-                  <div class="items my-3 mx-1" >
+                  <div class="items my-3 mx-1" id="item-imp" >
                    <div class="container-main-meals my-4 ">
                    <img onclick="addMeal(${meals.idMeal })" src="${meals.strMealThumb
                    }"/>

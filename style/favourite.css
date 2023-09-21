@@ -7,104 +7,101 @@
  }
  nav{
   
-     display:flex;
-     flex-direction:row;  
-     width:100%;  
-     height:12vh;
-     /* margin-top:-8px; */
-     background-color:#FEDE00;
- }
- 
- .nav-container{
-     display:flex;
-     flex-direction:row;
-     justify-content:space-between;
-     width:100%;
-     /* position:fixed; */
- }
- .nav-logo i{
-    margin:6px;
-     color:black;
-     font-size:40px;
-     padding:10px;
- }
- .nav-logo span{
-     font-size:2rem;
-     color:black;
- }
- 
- .nav-right{
-     width:70%;
-     display:flex;
-     justify-content:space-around;
- }
- .nav-input-container{
-     display:flex;
-     justify-content:center;
-     align-items:center;
-     color:black;
- }
- 
- .nav-input-container input{
-     padding:10px;
-     width:360px;
-     border:none;
-     border-radius:20px 0px 0px 20px;
-     align-items: center;
-     font-size:1.4rem;
-     color:black;
- }
- 
- .nav-input-container input:hover{
-     box-shadow: 0 0 10px inset black;
- }
-  
- .nav-input-container input:focus{
-     outline:none;
- }
- .nav-input-container button{
-     background-color:white;
-      height:46px;
-      width:60px;
-      padding:8px;
-      color:black;
-      margin-right:10px;
-      border:none;
-      outline:none;
-      border-radius:0px 20px 20px 0px;
- }
- 
- .nav-meal{
-     position: relative;
- }
- .nav-meal a{
-     color:black;
-    font-size:2.5rem;
-    text-decoration:none;
-    padding:8px;
-    position: absolute;
-    top:5px;
+    display:flex;
+    flex-direction:row;  
+    width:100%;  
+    height:12vh;
+    background-color:#FEDE00;
    
- }
- 
- 
- .like-button i{
-     color:orangered;
-     font-size:50px;
-     padding:5px;
-     margin-top:10px;
-     position:relative;
- }
- 
- .like-button span{
-    position:absolute;
+}
+
+.nav-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+    /* position:fixed; */
+}
+.nav-logo i{
+   margin:6px;
     color:black;
-    font-size:1.6rem;
-    top:1px;
-    right:95px;
-    z-index:1;
-    font-weight:700;
- }
+    font-size:40px;
+    padding:10px;
+}
+.nav-logo span{
+    font-size:2rem;
+    color:black;
+}
+
+.nav-right{
+    width:70%;
+    display:flex;
+    justify-content:space-around;
+}
+.nav-input-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+}
+
+.nav-input-container input{
+    padding:10px;
+    width:360px;
+    border:none;
+    border-radius:20px 0px 0px 20px;
+    align-items: center;
+    font-size:1.4rem;
+    color:black;
+}
+
+ 
+.nav-input-container input:focus{
+    outline:none;
+}
+.nav-input-container button{
+    background-color:white;
+     height:46px;
+     width:60px;
+     padding:8px;
+     color:black;
+     margin-right:10px;
+     border:none;
+     outline:none;
+     border-radius:0px 20px 20px 0px;
+}
+
+.nav-meal{
+    position: relative;
+}
+.nav-meal a{
+    color:black;
+   font-size:2.5rem;
+   text-decoration:none;
+   padding:8px;
+   position: absolute;
+   top:5px;
+  
+}
+
+
+.like-button i{
+    color:orangered;
+    font-size:50px;
+    padding:5px;
+    margin-top:10px;
+    position:relative;
+}
+
+.like-button span{
+   position:absolute;
+   color:black;
+   font-size:1.6rem;
+   left:82.6%;
+   top:5px;
+   z-index:1;
+   font-weight:700;
+}
 
 /* main-section */
 
@@ -235,6 +232,7 @@
     flex-direction:column;
     justify-content:center;
     align-items:center; 
+    overflow:hidden;
 }
 
 .soical-icons-div{
@@ -277,4 +275,44 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+}
+
+
+/* media queries for different devices */
+
+
+@media screen and (max-width:975px){
+    .soical-icons-div{
+        width:80%;
+    }
+    .fotter-options{
+        width:70%;
+        font-size:1rem;
+        flex-direction:column;
+        text-align:center;
+     }
+}
+
+@media screen and (max-width:676px){
+    .nav-logo i{
+        font-size:30px;
+    }
+    .nav-logo span{
+        font-size:1.3rem;
+    }
+    .like-button{
+        font-size:30px;
+    }
+   
+}
+
+@media screen and (max-width:502px){
+  
+     .nav-right{
+        width:70%;
+     }
+    .nav-meal a{
+        padding:7px;
+    }
+   
 }
