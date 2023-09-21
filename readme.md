@@ -58,16 +58,21 @@ Before you start, make sure you have the following:
    git clone https://github.com/Mansi523/MealApp.git
 
 ### AUTHOR
- # MANSI KUMARI
 
-### LAND PAGE
-<a href="mansi523.github.io/MealApp/"><img src="" alt="LAND PAGE" /></a>
+ # Mansi Kumari
+
+### LANDING PAGE
+<a href="mansi523.github.io/MealApp/"><img src="https://i.ibb.co/vY3Z7SB/mansimeal.png" alt="LAND PAGE" /></a>
+<a href="mansi523.github.io/MealApp/"><img src="https://i.ibb.co/2vBVwtX/mansimultiple.png" alt="LAND PAGE" /></a>
 
 ### FAVOURITE PAGE
-<a href="mansi523.github.io/MealApp/"><img src="" alt="FAVOURITE PAGE" /></a>
+<a href="mansi523.github.io/MealApp/"><img src="https://i.ibb.co/Yk8LdN6/mansicart.png" alt="FAVOURITE PAGE" /></a>
 
 ### DETAILS PAGE
-<a href="mansi523.github.io/MealApp/"><img src="" alt="DETAILS PAGE" /></a>
+<a href="mansi523.github.io/MealApp/"><img src="https://i.ibb.co/5xRhVCd/mansidetailsmeal.png" alt="DETAILS PAGE" /></a>
+
+### FOOTER
+<a href="mansi523.github.io/MealApp/"><img src="https://i.ibb.co/HHwdWfV/mansif.png" alt="mansif"></a>
 
 ### DEMO
 
