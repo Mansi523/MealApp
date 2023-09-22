@@ -6,7 +6,7 @@ const InputValue = document.getElementById("InputValue");
 const suggestion = document.getElementById("suggestion");
 const btnsearch = document.getElementById("btnsearch");
 const displaysuggestion = document.getElementById("display_suggestion");
-// variables for declaring valiues.
+// variables for declaring values.
 let categoryList = [];
 let categoryname = {};
 let MainFoodList = [];
@@ -34,7 +34,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// function for handling show suggestion.
+// function for handling show suggestion in the main section.
 function showSuggestion() {
   mainFoodSection.innerHTML = "";
   mainFoodSection.innerHTML += MainFoodList.map(
@@ -183,7 +183,6 @@ function MainDisplay() {
 
     try {
       const categoryObject = JSON.parse(localcategory);
-      console.log("***", categoryObject.strCategory);
       categorynamemain = categoryObject.strCategory;
     } catch (error) {
       console.error("Error parsing JSON:", error);
