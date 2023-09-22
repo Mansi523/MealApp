@@ -1,10 +1,13 @@
+/* made padding and margin 0 for the whole body */
 *{
     margin:0;
     padding:0;   
  }
+ /* css for the body section of the meal.html*/
  body{
      height:100vh;
  }
+ /*css for the nav section of the meal*/
  nav{
   
      display:flex;
@@ -14,13 +17,12 @@
      background-color:#FEDE00;
     
  }
- 
+ /* css for the nav section the of the container */
  .nav-container{
      display:flex;
      flex-direction:row;
      justify-content:space-between;
      width:100%;
-     /* position:fixed; */
  }
  .nav-logo i{
     margin:6px;
@@ -32,19 +34,19 @@
      font-size:2rem;
      color:black;
  }
- 
+ /* css for the right section of the nav */
  .nav-right{
      width:70%;
      display:flex;
      justify-content:space-around;
  }
+ /* css for the input section of the nav */
  .nav-input-container{
      display:flex;
      justify-content:center;
      align-items:center;
      color:black;
  }
- 
  .nav-input-container input{
      padding:10px;
      width:360px;
@@ -54,8 +56,6 @@
      font-size:1.4rem;
      color:black;
  }
-
-  
  .nav-input-container input:focus{
      outline:none;
  }
@@ -70,7 +70,7 @@
       outline:none;
       border-radius:0px 20px 20px 0px;
  }
- 
+ /* nav meal section for the nav */
  .nav-meal{
      position: relative;
  }
@@ -83,8 +83,7 @@
     top:5px;
    
  }
- 
- 
+ /* nav section for the like button of the nav */
  .like-button i{
      color:orangered;
      font-size:50px;
@@ -113,6 +112,9 @@
     justify-content:center;
     align-items:center;
 }
+
+/* main section for the nav */
+
 .details-container{
     display:flex;
     flex-direction:column;
@@ -168,13 +170,9 @@ object-fit: cover;
 font-size:1.5rem;
 text-decoration:none;
 color:black;
-
 }
 
-
- 
 /* fotter section */
-
 
 .fotter-div{
     height:500px;
@@ -185,7 +183,7 @@ color:black;
     justify-content:center;
     align-items:center; 
 }
-
+/* soical section for the fotter section*/
 .soical-icons-div{
  display:flex;
  flex-direction:row; 
@@ -210,6 +208,7 @@ color:black;
     color:black;
     margin:auto;
 }
+/* css for fotter options of the fotter section */
 .fotter-options{
     color:black;
     display:flex;
@@ -218,7 +217,6 @@ color:black;
     font-size:1.3rem;
     margin-bottom:90px;
 }
-
 .fotter-copyrighgt-span{
     margin-bottom:40px;
     color:black;

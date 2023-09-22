@@ -1,37 +1,39 @@
+/* css for the image in the slider */
 .img-box img{
   max-width:100%;
 
 }
-
+/* css for the container in the slider */
 .slider_container .container{
  padding: 0 15px;
  max-width: 1230px;
  margin: 0 auto;
 }
-
+/* css for the card slider */
 .card_slider {
   padding: 50px 0;
  
 }
+/* css for the text of the card slider */
 .text-d{
   font-size:1.5rem;
   font-weight:700;
 }
+/* css for the previous section */
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
   content: 'next';
   color: black;
 }
+/* css for the next section of the slider function of swiper.js*/
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
   content: 'prev';
   color: black;
 }
-
-
-
+/* css for the pegination section of the swiper*/
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
   background-color:black;
 }
-
+/* media queries for sliderjs */
 @media screen and (max-width:525px){
   .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
     display: none !important;;

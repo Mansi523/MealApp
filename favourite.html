@@ -5,32 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- css for favourite.html -->
     <Link rel="stylesheet" href="./style/favourite.css">
     </Link>
+    <!-- CDN for fontawsome -->
     <script src="https://kit.fontawesome.com/776f38ba77.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
 
+    <!-- for nav section -->
+    <nav>
+         <!-- nav container-->
+        <div class="nav-container">
+      
+            <!-- left section of the nav -->
             <div class="nav-left">
+                <!-- logo part of the nav section -->
                 <div class="nav-logo">
                    <a href="index.html"><i class="fa-solid fa-utensils"></i></a> 
                     <span>Pour Tous</span>
                 </div>
             </div>
            
-
+          <!-- right section of the nav-->
             <div class="nav-right">
 
-             
-                
+                <!-- meal section for the nav bar-->
                 <div class="nav-meal">
                 <a href="./meal.html">Meal</a>
                 </div>
-
+                <!-- favourite section for the nav bar-->
                 <div class="like-button">
                   <a href="./favourite.html" > <i class="fa-sharp fa-solid fa-heart"></i>
                     <span id="like-conunt">0</span></a>
@@ -41,18 +47,22 @@
         </div>
     
     </nav>
+
+    <!-- for main section -->
     <main>
 
-        <!-- for showing common data to Deliver Restaurants in India-->
+        <!-- for showing data in the main section of the favourite.html-->
         <div class="container-fluid py-1" style="background-color:black;">
             <h3 id="display-fav" class="py-1" style="color:#FEDE00; font-size:2rem;font-weight:300;padding:50px;">Your Favourite Food Section
             </h3>
+            <!-- favourite section of the main section will display when nothing is present -->
           <div id="go-back">
            <h3 class="text-a">Your Favourite Meal is empty </h3>
             <button id="btn"><a href="index.html">Go-Back</a></button>
             <h3 class="text-b"> Add Something to the cart.</h3>
           </div>
-
+            <!-- favourite section of the main section will display when data is present in the favourite section-->
+        
             <div id="display_common_food">
                 <!-- data is fetched from index.js -->
 
@@ -63,10 +73,12 @@
 
     </main>
 
+    <!-- for fotter section -->
     <fotter>
 
+        <!-- container for the whole fotter section-->
         <div class="fotter-div">
-            
+            <!-- for the soical icon of the fotter-->
             <div class="soical-icons-div">
 
                 <div class="soical-icons">
@@ -87,6 +99,7 @@
 
             </div>
 
+             <!--for the options of the fotter section-->
             <div class="fotter-options">
                 <span>PRIVACY</span>
                 <span>T&C</span>
@@ -95,6 +108,8 @@
                 <span>COVID-19 PRECAUTION</span>
                 <span>CONTACT LESS DELIVERY</span>
             </div>
+
+            <!-- for the copyright section of the fotter section -->
             <div class="fotter-copyrighgt">
                 <div class="fotter-copyrighgt-span">
                     <span>______________________________________________________________________________________________________________________________________________</span>

@@ -1,26 +1,26 @@
+/* made css for the padding and margin 0*/
 *{
     margin:0;
     padding:0;   
  }
+/* css for body section */
  body{
      height:100vh;
  }
+/* css for the nav section*/
  nav{
-  
     display:flex;
     flex-direction:row;  
     width:100%;  
     height:12vh;
     background-color:#FEDE00;
-   
 }
-
+/* css for the nav container */
 .nav-container{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     width:100%;
-    /* position:fixed; */
 }
 .nav-logo i{
    margin:6px;
@@ -32,19 +32,19 @@
     font-size:2rem;
     color:black;
 }
-
+/* css for the right section of the nav */
 .nav-right{
     width:70%;
     display:flex;
     justify-content:space-around;
 }
+/* css for the input section of the nav */
 .nav-input-container{
     display:flex;
     justify-content:center;
     align-items:center;
     color:black;
 }
-
 .nav-input-container input{
     padding:10px;
     width:360px;
@@ -54,8 +54,6 @@
     font-size:1.4rem;
     color:black;
 }
-
- 
 .nav-input-container input:focus{
     outline:none;
 }
@@ -70,7 +68,7 @@
      outline:none;
      border-radius:0px 20px 20px 0px;
 }
-
+/* css for the meal section of the nav */
 .nav-meal{
     position: relative;
 }
@@ -83,8 +81,7 @@
    top:5px;
   
 }
-
-
+/* css for the like section of the nav */
 .like-button i{
     color:orangered;
     font-size:50px;
@@ -181,7 +178,7 @@
     position:absolute;
     top:40%;
 }
-
+/* css for the favourite saection when nothing is present in the favourite section */
 #go-back{
     display:flex;
     flex-direction:column;
@@ -222,8 +219,6 @@
 
 
 /* fotter section */
-
-
 .fotter-div{
     height:500px;
     width:100%;
@@ -234,7 +229,7 @@
     align-items:center; 
     overflow:hidden;
 }
-
+/*soical icons for the div*/
 .soical-icons-div{
  display:flex;
  flex-direction:row; 
@@ -259,6 +254,7 @@
     color:black;
     margin:auto;
 }
+/* css for the fotter section of the div */
 .fotter-options{
     color:black;
     display:flex;
@@ -267,7 +263,7 @@
     font-size:1.3rem;
     margin-bottom:90px;
 }
-
+/* css for the copyright section of the div */
 .fotter-copyrighgt-span{
     margin-bottom:40px;
     color:black;

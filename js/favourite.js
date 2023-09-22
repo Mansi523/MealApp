@@ -1,11 +1,12 @@
+// variables
 let favouriteListDisplay = [];
-
+// fetch element by id
 const favDisplay = document.getElementById("display_common_food");
 const displayfav = document.getElementById("display-fav");
 const goback = document.getElementById("go-back");
 let count = document.getElementById("like-conunt");
-console.log("displayfav",favouriteListDisplay);
 
+// function for handling favourite section.
  function addfav(){
      favDisplay.innerHTML = "";
       favouriteListDisplay = JSON.parse(window.localStorage.getItem("favourite"));
@@ -17,15 +18,13 @@ console.log("displayfav",favouriteListDisplay);
             displayfav.style.display="block";
             goback.style.display="none";
          }
-    favDisplay.innerHTML+= favouriteListDisplay.map((item,index)=>(
-    
-           `    <div class="items my-3 mx-1">
-           <div class="container-main-meals my-4 ">
-               <i onclick="handleDelete(${item.idMeal})" class="fa-solid fa-trash"></i>
-               <img
+         favDisplay.innerHTML+= favouriteListDisplay.map((item,index)=>(
+            ` <div class="items my-3 mx-1">
+                <div class="container-main-meals my-4 ">
+                <i onclick="handleDelete(${item.idMeal})" class="fa-solid fa-trash"></i>
+                <img
                    src="${item.strMealThumb}" />
-                                      
-                   
+                                         
                <div class="container-main-meals-all">
 
                    <div class="container-meals-left">
@@ -39,22 +38,25 @@ console.log("displayfav",favouriteListDisplay);
 
                </div>
 
+              </div>
            </div>
-       </div>`
+       `
     ));
 
     }
 
-
+  // function for handling delete section.
    const handleDelete=(id)=>{
     const result = favouriteListDisplay.filter((item)=>(
          item.idMeal != id
     ));
     
-  
+  // setting data for local storage of the favourite section.
     window.localStorage.setItem("favourite",JSON.stringify(result));
      alert("Item deleted succesfully");
      addfav();
    }
 
    addfav();
+
+

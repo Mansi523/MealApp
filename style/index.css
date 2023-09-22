@@ -1,28 +1,29 @@
+/* made padding and margin 0 for the whole screen */
 *{
    margin:0;
    padding:0;   
 }
+/* css for the body section */
 body{
     height:100vh;
 }
+/* css for the nav section */
 nav{
  
     display:flex;
     flex-direction:row;  
     width:100%;  
     height:12vh;
-    /* margin-top:-8px; */
-    /* background-color:rgb(14 27 77); */
     background-color:#FEDE00;
 }
-
+/* css for the nav container */
 .nav-container{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     width:100%;
-    /* position:fixed; */
-}
+} 
+/* for logo section of the nav */
 .nav-logo i{
    margin:6px;
     color:black;
@@ -33,7 +34,7 @@ nav{
     font-size:2rem;
     color: black;
 }
-
+/* css for the right section of the nav */
 .nav-right{
     width:70%;
     display:flex;
@@ -58,13 +59,10 @@ nav{
     border-right:none;
    
 }
-
-
 .nav-input-container input:focus{
     outline:none;
 }
-.nav-input-container button{
-   
+.nav-input-container button{  
     background-color:white;
      height:46px;
      width:60px;
@@ -77,6 +75,7 @@ nav{
      border:2px solid black;
      border-left:none;
 }
+/* css for the suggestion for the search section */
 .parent-div-input{
     position: relative;
 }
@@ -103,8 +102,9 @@ cursor:pointer;
 #suggestion ul li span{
     margin:0 5px 0 5px;
     padding:6px;
-    /* font-size:1rem; */
 }
+
+/* css for meal section of the nav */
 .nav-meal{
     position: relative;
 }
@@ -118,7 +118,7 @@ cursor:pointer;
   
 }
 
-
+/* css for the favourite section of the nav */
 .like-button i{
     color:orangered;
     font-size:50px;
@@ -136,23 +136,20 @@ cursor:pointer;
    z-index:1;
    font-weight:700;
 }
-
+/* slider section for the container */
 .slider-container {
     overflow: hidden;
     width: 100%;
     position: relative;
 }
-
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-
 .slider img {
     width: 100%;
     height: auto;
 }
-
 .prev-button,
 .next-button {
     background-color: #007bff;
@@ -161,25 +158,21 @@ cursor:pointer;
     border: none;
     cursor: pointer;
 }
-
 .prev-button {
     position: absolute;
     left: 10px;
 }
-
 .next-button {
     position: absolute;
     right: 10px;
 }
-
 .main-div{
     width:100%;
-    /* height:600px; */
     margin-top:-5px;
 }
 
+/* css for fotter section */
 .fotter-div{
-    /* background-image:url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fcartoon-black-food-poster-background--712131759821730202%2F&psig=AOvVaw39cHAFquLs-Hmtd_kjeXSC&ust=1694613718606000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMixk-_FpoEDFQAAAAAdAAAAABAZ"); */
     height:500px;
     width:100%;
     background-color:#FEDE00;
@@ -189,11 +182,11 @@ cursor:pointer;
     align-items:center;
     overflow: hidden; 
 }
+/* css for the soical icon*/
 .soical-icons-div{
  display:flex;
  flex-direction:row; 
  justify-content:space-around;
- /* border:1px solid red; */
  width:60%;
  margin-top:50px;
  margin-bottom:70px;
@@ -214,6 +207,8 @@ cursor:pointer;
     color:black;
     margin:auto;
 }
+
+/* css for the fotter section for the options */
 .fotter-options{
     color:black;
     display:flex;
@@ -222,7 +217,7 @@ cursor:pointer;
     font-size:1.3rem;
     margin-bottom:90px;
 }
-
+/* css for the copyright for the sections */
 .fotter-copyrighgt-span{
     margin-bottom:40px;
     color:black;
@@ -231,6 +226,7 @@ cursor:pointer;
     justify-content:center;
     align-items:center;
 }
+/* css for the category section */
 #category{
     display:flex;
     justify-content:space-between;
@@ -245,7 +241,7 @@ cursor:pointer;
     width:100%;
     border-radius:50%;
 }
-
+/* css for the main section of the category section */
 #display_common_food{
     display:flex;
     justify-content:space-between;
@@ -255,7 +251,6 @@ cursor:pointer;
 .container-main-meals{
     height:400px;
     width:350px;
-    /* border:2px solid white;*/
     margin:20px;
     border-radius:30px;
     background-color:#FEDE00;
@@ -273,7 +268,6 @@ cursor:pointer;
     padding:20px;
     border-radius:10%;
     transition: all 0.5s ease;
-    
 }
 .container-main-meals-all{
     height:80px;
@@ -288,7 +282,6 @@ cursor:pointer;
     font-size:1rem;
     font-weight:500;
 }
-
 .container-meals-right{
     width:50%;
     margin-left:150px;
